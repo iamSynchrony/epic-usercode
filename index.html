@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Games Activation</title>
+</head>
+<body>
+    <h1>Enter Your User Code</h1>
+    <form id="activationForm">
+        <label for="userCode">User Code:</label>
+        <input type="text" id="userCode" name="userCode" required>
+        <button type="submit">Activate</button>
+    </form>
+
+    <script>
+        document.getElementById('activationForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const userCode = document.getElementById('userCode').value;
+            if (userCode) {
+                window.location.href = `https://www.epicgames.com/activate?userCode=${encodeURIComponent(userCode)}`;
+            } else {
+                alert("Please enter a user code.");
+            }
+        });
+    </script>
+</body>
+</html>
