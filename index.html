@@ -9,7 +9,7 @@
     <h1>Enter Your User Code</h1>
     <form id="activationForm">
         <label for="userCode">User Code:</label>
-        <input type="text" id="userCode" name="userCode" required>
+        <input type="text" id="userCode" name="userCode" required oninput="this.value = this.value.toUpperCase()">
         <button type="submit">Activate</button>
     </form>
 
